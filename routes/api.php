@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DeviceController;
+use App\Http\Controllers\MachineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::put('/updatedevice',[DeviceController::class, 'update']);
 Route::get('/searchdevice/{name}',[DeviceController::class, 'search']);
 
 Route::delete('/deletedevice/{id}', [DeviceController::class, 'delete']);
+
+Route::get('/devicemachinelist/', [MachineController::class, 'list']);
